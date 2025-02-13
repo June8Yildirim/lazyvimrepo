@@ -18,10 +18,10 @@ return {
       TODO = { icon = " ", color = "info" },
       HACK = { icon = " ", color = "warning" },
       BUG = { icon = " ", color = "bug" },
-      WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-      PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-      NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-      TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+      WARN = { icon = " ", color = "warning" }, -- alt = { "WARNING", "XXX" } },
+      PERF = { icon = " ", color = "perf" }, -- alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+      NOTE = { icon = " ", color = "hint" }, -- alt = { "INFO" } },
+      TEST = { icon = "⏲ ", color = "test" }, --, alt = { "TESTING", "PASSED", "FAILED" } },
     },
     gui_style = {
       fg = "NONE", -- The gui style to use for the fg highlight group.
@@ -49,11 +49,12 @@ return {
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#f40808" },
       warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
-      info = { "DiagnosticInfo", "#2563EB" },
-      hint = { "DiagnosticHint", "#10B981" },
-      bug = { "DiagnosticError", "#4C4C4C" },
+      info = { "DiagnosticInfo", "#79BAEC" },
+      hint = { "DiagnosticHint", "#7FE817" },
+      bug = { "DiagnosticError", "#FAF884" },
       default = { "Identifier", "#7C3AED" },
-      test = { "Identifier", "#FF00FF" },
+      test = { "DiagnosticInfo", "#FD349C" },
+      perf = { "DiagnosticInfo", "##6CC417" },
     },
     search = {
       command = "rg",
@@ -70,13 +71,13 @@ return {
       -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
     },
     -- stylua: ignore
-    -- keys = {
-    --   { "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
-    --   { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
-    --   { "<leader>xt", "<cmd>TodoTrouble<cr>", desc = "Todo (Trouble)" },
-    --   { "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
-    --   { "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
-    --   { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
-    -- },
+    keys = {
+      { "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
+      { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
+      { "<leader>xt", "<cmd>TodoTrouble<cr>", desc = "Todo (Trouble)" },
+      { "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
+      { "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+      { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
+    },
   },
 }

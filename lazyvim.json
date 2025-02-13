@@ -7,8 +7,8 @@
     "lazyvim.plugins.extras.lang.scala"
   ],
   "news": {
-    "NEWS.md": "6520",
+    "NEWS.md": "10960",
     "doc/news.txt": "24450"
   },
-  "version": 6
+  "version": 8
 }
