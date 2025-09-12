@@ -1,3 +1,4 @@
+-- override nvim-cmp and add cmp-emoji
 return {
   {
     "hrsh7th/nvim-cmp",
