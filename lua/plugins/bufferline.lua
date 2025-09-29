@@ -8,8 +8,9 @@ return {
   },
   opts = {
     options = {
-      mode = "tabs",
-      -- separator_style = "sladnt",
+      -- mode = "tabs",
+      mode = "buffers",
+      separator_style = "slant", -- "thin" | "thick" | "slant"
       offsets = {
         {
           filetype = "neo-tree",
@@ -27,17 +28,15 @@ return {
       show_buffer_close_icons = true,
       show_close_icon = true,
     },
-    buffer_close_icon = "",
-    modified_icon = "●",
-    close_icon = "",
-    left_trunc_marker = "",
-    right_trunc_marker = "",
     highlights = {
       buffer_selected = {
         italic = false,
         bold = true,
-        fg = "#ffffff",
-        bg = "red",
+        fg = "#007C80",
+        bg = "#00FF00",
+      },
+      fill = {
+        bg = "#1e1e2e", -- background of the empty area
       },
       indicator_selected = {
         fg = "#ff9e64",
@@ -46,8 +45,8 @@ return {
         fg = "#ff9e64",
       },
       close_button_selected = {
-        fg = "#ffffff",
-        bg = "#1e1e2e",
+        fg = "#007C80",
+        bg = "#00FF00",
       },
     },
   },
