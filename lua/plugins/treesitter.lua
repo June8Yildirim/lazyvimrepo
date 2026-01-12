@@ -8,6 +8,7 @@ return {
         "html",
         "javascript",
         "json",
+        "cpp",
         "java",
         "lua",
         "markdown",
