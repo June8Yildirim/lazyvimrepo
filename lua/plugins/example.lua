@@ -150,7 +150,7 @@ return {
         "vim",
         "yaml",
         "go",
-        -- "gopls",
+        "gopls",
         "gomod",
         "gowork",
         "gosum",
@@ -228,20 +228,21 @@ return {
   { import = "lazyvim.plugins.extras.lang.json" },
 
   -- add any tools you want to have installed below
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "shellcheck",
-        "shfmt",
-        "flake8",
-        "goimports",
-        "gofumpt",
-        "gopls",
-      },
-    },
-  },
+  -- {
+  --   "mason-org/mason.nvim",
+  --   opts = {
+  --     auto_install = false,
+  --     ensure_installed = {
+  --       "stylua",
+  --       "shellcheck",
+  --       "shfmt",
+  --       "flake8",
+  --       "goimports",
+  --       "gofumpt",
+  --       "gopls",
+  --     },
+  --   },
+  -- },
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
     "L3MON4D3/LuaSnip",

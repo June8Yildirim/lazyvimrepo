@@ -1,6 +1,15 @@
+-- return {
+--   "rcarriga/nvim-notify",
+--   opts = {
+--     timeout = 500,
+--   },
+-- }
 return {
-  "rcarriga/nvim-notify",
+  "folke/noice.nvim",
   opts = {
-    timeout = 500,
+    notify = {
+      enabled = true,
+      view = "notify",
+    },
   },
 }
