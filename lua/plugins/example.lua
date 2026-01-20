@@ -154,6 +154,11 @@ return {
         "gomod",
         "gowork",
         "gosum",
+        "python",
+      },
+      indent = {
+        enable = true,
+        disable = { "python" },
       },
     },
   },
@@ -194,12 +199,12 @@ return {
       },
     },
   },
-  {
-    "theHamsta/nvim-dap-virtual-text",
-    opts = {
-      virt_text_win_col = 80,
-    },
-  },
+  -- {
+  --   "theHamsta/nvim-dap-virtual-text",
+  --   opts = {
+  --     virt_text_win_col = 80,
+  --   },
+  -- },
   -- the opts function can also be used to change the default opts:
   {
     "nvim-lualine/lualine.nvim",
@@ -223,6 +228,7 @@ return {
   -- use mini.starter instead of alpha
   { import = "lazyvim.plugins.extras.ui.mini-starter" },
   { import = "lazyvim.plugins.extras.lang.java" },
+  { import = "lazyvim.plugins.extras.lang.python" },
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
