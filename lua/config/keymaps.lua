@@ -3,3 +3,10 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader><F5>", vim.cmd.UndotreeToggle)
+-- Diffview keymaps
+vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<cr>", { desc = "Diffview Open" })
+vim.keymap.set("n", "<leader>gD", "<cmd>DiffviewClose<cr>", { desc = "Diffview Close" })
+vim.keymap.set("n", "<leader>gt", "<cmd>DiffviewToggleFiles<cr>", { desc = "Diffview Toggle Files" })
+vim.keymap.set("n", "<leader>gf", "<cmd>DiffviewFocusFiles<cr>", { desc = "Diffview Focus Files" })
+vim.keymap.set("n", "<leader>gh", "<cmd>DiffviewFileHistory<cr>", { desc = "File History" })
+vim.keymap.set("n", "<leader>gH", "<cmd>DiffviewFileHistory %<cr>", { desc = "File History (current)" })

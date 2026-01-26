@@ -1,8 +1,6 @@
 -- add any tools you want to have installed below
-return
--- add any tools you want to have installed below
-{
-  "williamboman/mason.nvim",
+return {
+  "mason-org/mason.nvim",
   opts = {
     ensure_installed = {
       "stylua",
@@ -11,9 +9,9 @@ return
       "flake8",
       "goimports",
       "ruff",
-      "python",
       "gofumpt",
       "gopls",
+      "pyright",
     },
   },
 }

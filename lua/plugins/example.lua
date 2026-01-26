@@ -141,7 +141,6 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
-        "python",
         "query",
         "regex",
         "java",
@@ -150,11 +149,10 @@ return {
         "vim",
         "yaml",
         "go",
-        -- "gopls",
+        "gopls",
         "gomod",
         "gowork",
         "gosum",
-        "python",
       },
       indent = {
         enable = true,
@@ -235,7 +233,7 @@ return {
 
   -- add any tools you want to have installed below
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "stylua",
