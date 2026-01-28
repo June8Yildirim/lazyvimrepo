@@ -145,6 +145,7 @@ return {
         "regex",
         "java",
         "tsx",
+        "clangd",
         "typescript",
         "vim",
         "yaml",
@@ -164,19 +165,30 @@ return {
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
   -- If you'd rather extend the default config, use the code below instead:
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      -- add tsx and treesitter
-      vim.list_extend(opts.ensure_installed, {
-        "tsx",
-        "typescript",
-      })
-    end,
-  },
+
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   opts = function(_, opts)
+  --     -- add tsx and treesitter
+  --     vim.list_extend(opts.ensure_installed, {
+  --       "tsx",
+  --       "typescript",
+  --     })
+  --   end,
+  -- },
 
   {
     "mfussenegger/nvim-jdtls",
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        markdownlint = {
+          args = { "--disable", "MD013", "--" },
+        },
+      },
+    },
   },
   {
     "mfussenegger/nvim-dap",
@@ -223,29 +235,21 @@ return {
     end,
   },
 
-  -- use mini.starter instead of alpha
-  { import = "lazyvim.plugins.extras.ui.mini-starter" },
-  { import = "lazyvim.plugins.extras.lang.java" },
-  { import = "lazyvim.plugins.extras.lang.python" },
-
-  -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-  { import = "lazyvim.plugins.extras.lang.json" },
-
   -- add any tools you want to have installed below
-  {
-    "mason-org/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "shellcheck",
-        "shfmt",
-        "flake8",
-        "goimports",
-        "gofumpt",
-        "gopls",
-      },
-    },
-  },
+  -- {
+  --   "mason-org/mason.nvim",
+  --   opts = {
+  --     ensure_installed = {
+  --       "stylua",
+  --       "shellcheck",
+  --       "shfmt",
+  --       "flake8",
+  --       "goimports",
+  --       "gofumpt",
+  --       "gopls",
+  --     },
+  --   },
+  -- },
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
     "L3MON4D3/LuaSnip",

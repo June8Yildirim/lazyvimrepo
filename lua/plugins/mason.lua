@@ -5,6 +5,7 @@ return {
     ensure_installed = {
       "stylua",
       "shellcheck",
+      "clangd",
       "shfmt",
       "flake8",
       "goimports",

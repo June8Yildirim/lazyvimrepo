@@ -6,3 +6,7 @@
 vim.g.lazyvim_blink_main = false
 vim.o.background = "dark"
 -- vim.cmd([[colorscheme tokyonight]])
+-- Disable MD013 for markdownlint
+vim.g.markdownlint_config = {
+  MD013 = false,
+}

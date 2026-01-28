@@ -10,3 +10,4 @@ vim.keymap.set("n", "<leader>gt", "<cmd>DiffviewToggleFiles<cr>", { desc = "Diff
 vim.keymap.set("n", "<leader>gf", "<cmd>DiffviewFocusFiles<cr>", { desc = "Diffview Focus Files" })
 vim.keymap.set("n", "<leader>gh", "<cmd>DiffviewFileHistory<cr>", { desc = "File History" })
 vim.keymap.set("n", "<leader>gH", "<cmd>DiffviewFileHistory %<cr>", { desc = "File History (current)" })
+vim.api.nvim_set_keymap("n", "<leader>nj", ":lua CreateJavaProject()<CR>", { noremap = true, silent = true })
